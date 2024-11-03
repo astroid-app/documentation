@@ -28,7 +28,7 @@ _(Note: I am using Postman in the example screenshots.)_
 
 <summary>cURL snippet</summary>
 
-```
+```shell
 curl --location --request DELETE 'https://astroid.cc/delete/YOUR-DISCORD-SERVER-ID?token=YOUR-TOKEN'
 ```
 
