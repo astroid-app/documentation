@@ -21,6 +21,12 @@ Please make sure to follow these steps:
 
 ## Documentation Pages
 
+### Getting started with Astroid
+
+* [First steps](get-started/first-steps.md)
+* [Adding more channels](get-started/adding-more-channels.md)
+* [Delete your endpoint](get-started/deleting-your-endpoint.md)
+
 ### Developing with Astroid
 
 * [API Documention](https://app.gitbook.com/o/pSKuu7mepkFkMpNwdm5H/s/MSN2dUB5IBZtNRcpzMxV/)
