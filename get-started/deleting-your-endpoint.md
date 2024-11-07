@@ -4,7 +4,7 @@ icon: trash-can
 
 # Deleting your endpoint
 
-You want to delete your endpoint (bridge)? Thats sad to hear :( Do you want to give us some feedback why? -> Join our Support Servers <mark style="color:red;">\[ADD LINK]</mark>
+You want to delete your endpoint (bridge)? Thats sad to hear :( Do you want to give us some feedback why? -> Join our [Support Servers](../useful/support-server-list.md)
 
 ## Option 1: via the Discord bot
 
