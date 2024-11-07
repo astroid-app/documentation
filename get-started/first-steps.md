@@ -6,7 +6,9 @@ icon: arrow-right-to-bracket
 
 To get started with Astroid you first need to set everything up. This Step-by-Step Guide will help you to setup everything.
 
-Command provided for other platforms than Discord are **always** the same.
+Command provided for other platforms than Discord are **always** the same.\
+\
+_<mark style="color:yellow;">Note: For every command you use on discord you must have</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">**administrator**</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">permissions. On guilded there is no "administrator" permission, you'd need every permission to use Astroid's commands.</mark>_
 
 ## Step 1: Invite Astroid
 
