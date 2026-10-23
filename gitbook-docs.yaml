@@ -1,0 +1,17 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Astroid Documentation
+  structure:
+    - type: space
+      key: space-1
+      title: Astroid User Guide
+      path: astroid-documentation
+      default: true
+      content:
+        directory: ./astroid-documentation
+    - type: space
+      key: space-2
+      title: API Documentation
+      path: api
+      content:
+        directory: ./api
