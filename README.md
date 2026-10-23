@@ -29,7 +29,14 @@ Please make sure to follow these steps:
 
 ### Developing with Astroid
 
-* [API Documention](https://app.gitbook.com/o/pSKuu7mepkFkMpNwdm5H/s/MSN2dUB5IBZtNRcpzMxV/)
+* [API overview](api/README.md)
+* [Endpoint object](api/endpoint-object.md)
+* [Endpoints & configuration](api/endpoints.md)
+* [Messages](api/messages.md)
+* [Emojis](api/emojis.md)
+* [Tokens & deletion](api/tokens-and-deletion.md)
+* [Public routes](api/public.md)
+* [Admin & self-hosting](api/admin.md)
 
 ### Selhosting
 

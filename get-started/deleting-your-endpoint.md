@@ -29,7 +29,9 @@ _(Note: I am using Postman in the example screenshots.)_
 <summary>cURL snippet</summary>
 
 ```shell
-curl --location --request DELETE 'https://astroid.cc/delete/YOUR-DISCORD-SERVER-ID?token=YOUR-TOKEN'
+curl --request DELETE 'https://api.astroid.cc/delete?token=YOUR-TOKEN' \
+  --header 'Content-Type: application/json' \
+  --data '{"endpointId": "YOUR-DISCORD-SERVER-ID"}'
 ```
 
 </details>
@@ -40,25 +42,39 @@ curl --location --request DELETE 'https://astroid.cc/delete/YOUR-DISCORD-SERVER-
 
 ### Step 2: Enter the API URL
 
-Enter the following API URL and
-
-* replace <mark style="color:yellow;">`YOUR-DISCORD-SERVER-ID`</mark> with your discord server id and
-* replace <mark style="color:yellow;">`YOUR-TOKEN`</mark> with the token you got in the registering process\
-  (Alternatively you can run the <mark style="color:purple;">`/generate-token`</mark> command on discord to get a new one)
+Enter the following API URL and replace <mark style="color:yellow;">`YOUR-TOKEN`</mark> with the token you got when you registered.\
+(Lost it? Run the <mark style="color:purple;">`/generate-token`</mark> command on Discord to get a new one.)
 
 ```
-https://api.astroid.cc/delete/YOUR-DISCORD-SERVER-ID?token=YOUR-TOKEN
+https://api.astroid.cc/delete?token=YOUR-TOKEN
 ```
 
-### Step 3: Press Send
+### Step 3: Add your server ID to the body
 
-If you replaced and set everything correctly send the request. The API should respond instantly with a succesful response. E.g.:
+Open the **Body** tab, select **raw** and **JSON**, and paste the following. Replace <mark style="color:yellow;">`YOUR-DISCORD-SERVER-ID`</mark> with your Discord server ID.
 
 ```json
 {
-    "message": "Deleted."
+    "endpointId": "YOUR-DISCORD-SERVER-ID"
 }
 ```
+
+{% hint style="info" %}
+Keep the quotes around the ID. Discord IDs are too long to be sent as a plain number.
+{% endhint %}
+
+### Step 4: Press Send
+
+If everything is set correctly, the API responds right away with:
+
+```json
+{
+    "message": "Endpoint and tokens deleted",
+    "endpointId": "YOUR-DISCORD-SERVER-ID"
+}
+```
+
+More details are in the [API reference](../api/tokens-and-deletion.md#delete-your-endpoint).
 
 
 
