@@ -27,15 +27,11 @@ Please make sure to follow these steps:
 
 ### Developing with Astroid
 
-* [API overview](/broken/pages/Gx3AY1sQlCYFlSkJYTiE)
-* [Endpoint object](/broken/pages/lMRLYoQ3rd5Q9jLrjK0X)
-* [Endpoints & configuration](/broken/pages/FYpT0DQ1fJRXM4HO6bgk)
-* [Messages](/broken/pages/eWKuWuUp8YvSfRBYpfVz)
-* [Emojis](/broken/pages/BZkqQr8m8fI7flHRDj26)
-* [Tokens & deletion](/broken/pages/F2N4A849fHuLkZFgvR1q)
-* [Public routes](/broken/pages/hQEZ9dPX5lTZNbzqecZG)
-* [Admin & self-hosting](/broken/pages/Z2W77GGF9tEKZOlUcyxW)
+You want to develop with Astroid e.g a custom bot for a platform Astroid doesn't support, extension-like bots or any other project? Astroid got you covered. Astroid's API uses a simple system open for anybody.\
+Visit Astroid's API documentation here:<br>
 
-### Selhosting
+> [https://docs.astroid.cc/api/](https://docs.astroid.cc/api/)
+
+### Selfhosting
 
 Work in progress.
