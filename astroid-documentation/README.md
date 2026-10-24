@@ -27,14 +27,14 @@ Please make sure to follow these steps:
 
 ### Developing with Astroid
 
-* [API overview](api/api.md)
-* [Endpoint object](api/endpoint-object.md)
-* [Endpoints & configuration](api/endpoints.md)
-* [Messages](api/messages.md)
-* [Emojis](api/emojis.md)
-* [Tokens & deletion](api/tokens-and-deletion.md)
-* [Public routes](api/public.md)
-* [Admin & self-hosting](api/admin.md)
+* [API overview](/broken/pages/Gx3AY1sQlCYFlSkJYTiE)
+* [Endpoint object](/broken/pages/lMRLYoQ3rd5Q9jLrjK0X)
+* [Endpoints & configuration](/broken/pages/FYpT0DQ1fJRXM4HO6bgk)
+* [Messages](/broken/pages/eWKuWuUp8YvSfRBYpfVz)
+* [Emojis](/broken/pages/BZkqQr8m8fI7flHRDj26)
+* [Tokens & deletion](/broken/pages/F2N4A849fHuLkZFgvR1q)
+* [Public routes](/broken/pages/hQEZ9dPX5lTZNbzqecZG)
+* [Admin & self-hosting](/broken/pages/Z2W77GGF9tEKZOlUcyxW)
 
 ### Selhosting
 

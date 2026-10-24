@@ -74,9 +74,7 @@ If everything is set correctly, the API responds right away with:
 }
 ```
 
-More details are in the [API reference](../api/tokens-and-deletion.md#delete-your-endpoint).
-
-
+More details are in the [API reference](/broken/pages/F2N4A849fHuLkZFgvR1q#delete-your-endpoint).
 
 ## Option 3: Send us an E-Mail
 
@@ -95,8 +93,6 @@ i would like to delete my endpoint with the id <mark style="color:blue;">`ENDPOI
 Best regards!
 
 </details>
-
-
 
 If you send us an E-Mail, please make sure the following information is contained:
 
