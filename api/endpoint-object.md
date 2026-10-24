@@ -1,13 +1,13 @@
 ---
-icon: brackets-curly
 description: The structure of an endpoint, as returned by GET /{endpointId}.
+icon: list-tree
 ---
 
-# Endpoint object
+# Endpoint Object
 
 An endpoint has two parts:
 
-* `config`: your settings. You change these with [`/{endpointId}/config`](endpoints.md).
+* `config`: your settings. You change these with [`/{endpointId}/config`](/broken/pages/b74680fcd17608721a869ee7cd55a2dee8039691).
 * `meta`: Astroid's internal state (the last message, read status, message queue). You normally don't touch it.
 
 ## Full example
@@ -71,17 +71,17 @@ This is what a freshly registered endpoint looks like, with one Discord channel 
 
 ## `config`
 
-| Key               | Type     | Description                                                                                       |
-| ----------------- | -------- | ------------------------------------------------------------------------------------------------- |
-| `allowed-ids`     | string[] | IDs of bots or webhooks whose messages are still bridged. By default, bot messages are ignored.   |
-| `blacklist`       | string[] | Words that stop a message from being bridged.                                                     |
-| `channels`        | object   | Bridged channel IDs per platform. See [How channels are paired](#how-channels-are-paired).        |
-| `emoji_filtering` | boolean  | If `true`, custom emojis without a [mapping](emojis.md) are removed instead of sent as text.      |
-| `emojis`          | object[] | Emoji mappings between platforms. See [Emojis](emojis.md).                                        |
-| `isbeta`          | boolean  | Whether this endpoint uses the Astroid beta bots.                                                 |
-| `logs`            | object   | Log channel ID per platform.                                                                      |
-| `self-user`       | boolean  | Whether messages Astroid itself sent are bridged again.                                           |
-| `webhooks`        | object   | Webhook URLs per platform, used to post bridged messages.                                         |
+| Key               | Type      | Description                                                                                                                               |
+| ----------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `allowed-ids`     | string\[] | IDs of bots or webhooks whose messages are still bridged. By default, bot messages are ignored.                                           |
+| `blacklist`       | string\[] | Words that stop a message from being bridged.                                                                                             |
+| `channels`        | object    | Bridged channel IDs per platform. See [How channels are paired](endpoint-object.md#how-channels-are-paired).                              |
+| `emoji_filtering` | boolean   | If `true`, custom emojis without a [mapping](/broken/pages/d980fb13dfed3dda361faa1a18f51a93f73c91cf) are removed instead of sent as text. |
+| `emojis`          | object\[] | Emoji mappings between platforms. See [Emojis](/broken/pages/d980fb13dfed3dda361faa1a18f51a93f73c91cf).                                   |
+| `isbeta`          | boolean   | Whether this endpoint uses the Astroid beta bots.                                                                                         |
+| `logs`            | object    | Log channel ID per platform.                                                                                                              |
+| `self-user`       | boolean   | Whether messages Astroid itself sent are bridged again.                                                                                   |
+| `webhooks`        | object    | Webhook URLs per platform, used to post bridged messages.                                                                                 |
 
 `channels`, `logs` and `webhooks` each have one key per platform: `discord`, `guilded`, `nerimity` and `revolt`.
 
@@ -102,11 +102,11 @@ This is why you should always run <mark style="color:purple;">`add-bridge`</mark
 
 ## `meta`
 
-| Key              | Description                                                                   |
-| ---------------- | ----------------------------------------------------------------------------- |
-| `_message_cache` | The queue of messages waiting to be sent. Filled by [`POST /{endpointId}/messages`](messages.md). |
-| `message`        | The last message that was bridged. Same shape as the [message object](messages.md#message-object). |
-| `read`           | Per platform: whether that platform's bot has already sent the last message.  |
-| `sender`         | Platform the last message came from.                                          |
-| `sender-channel` | Channel the last message came from.                                           |
-| `trigger`        | Internal flag. Ignore it.                                                     |
+| Key              | Description                                                                                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `_message_cache` | The queue of messages waiting to be sent. Filled by [`POST /{endpointId}/messages`](/broken/pages/1c2d6e7a7f5de3491c9dad4ba1c37f7e37617141).  |
+| `message`        | The last message that was bridged. Same shape as the [message object](/broken/pages/1c2d6e7a7f5de3491c9dad4ba1c37f7e37617141#message-object). |
+| `read`           | Per platform: whether that platform's bot has already sent the last message.                                                                  |
+| `sender`         | Platform the last message came from.                                                                                                          |
+| `sender-channel` | Channel the last message came from.                                                                                                           |
+| `trigger`        | Internal flag. Ignore it.                                                                                                                     |

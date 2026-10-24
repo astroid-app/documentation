@@ -1,6 +1,6 @@
 ---
-icon: face-smile
 description: Map custom emojis between platforms.
+icon: face-smile-plus
 ---
 
 # Emojis
@@ -9,12 +9,12 @@ Custom emojis are different on every platform. An emoji mapping tells Astroid wh
 
 ## Emoji formats
 
-| Platform | Format                | Example                |
-| -------- | --------------------- | ---------------------- |
-| Discord  | `<:name:id>`          | `<:test:1234567890>`   |
-| Guilded  | `<:name:id>`          | `<:test:1234567890>`   |
-| Stoat    | `:name:`              | `:test:`               |
-| Nerimity | `[ce:id:name]`        | `[ce:1234567890:test]` |
+| Platform | Format         | Example                |
+| -------- | -------------- | ---------------------- |
+| Discord  | `<:name:id>`   | `<:test:1234567890>`   |
+| Guilded  | `<:name:id>`   | `<:test:1234567890>`   |
+| Stoat    | `:name:`       | `:test:`               |
+| Nerimity | `[ce:id:name]` | `[ce:1234567890:test]` |
 
 An emoji mapping is one object with one key per platform:
 
@@ -27,7 +27,7 @@ An emoji mapping is one object with one key per platform:
 }
 ```
 
-If a message contains a custom emoji without a mapping, it is sent as plain text. Set `emoji_filtering` to `true` in your [config](endpoints.md#add-to-the-configuration) to remove such emojis instead.
+If a message contains a custom emoji without a mapping, it is sent as plain text. Set `emoji_filtering` to `true` in your [config](/broken/pages/b74680fcd17608721a869ee7cd55a2dee8039691#add-to-the-configuration) to remove such emojis instead.
 
 ## Add an emoji
 

@@ -1,6 +1,6 @@
 ---
-icon: message
-description: Send messages into a bridge and mark them as read.
+description: Send messages into a bridge.
+icon: message-lines
 ---
 
 # Messages
@@ -36,32 +36,32 @@ Response:
 }
 ```
 
-| Status | Response                                                                                         |
-| ------ | ------------------------------------------------------------------------------------------------ |
-| `200`  | `{"message": "Message added to queue", "status": 200, "queueLength": 1}`                          |
-| `400`  | `{"message": "Bad Request: No message provided", "status": 400}`                                  |
-| `400`  | `{"message": "Bad Request: Invalid message fields", "status": 400, "details": [...]}`             |
-| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`                                       |
-| `404`  | `{"message": "Endpoint not found", "status": 404}`                                                |
+| Status | Response                                                                              |
+| ------ | ------------------------------------------------------------------------------------- |
+| `200`  | `{"message": "Message added to queue", "status": 200, "queueLength": 1}`              |
+| `400`  | `{"message": "Bad Request: No message provided", "status": 400}`                      |
+| `400`  | `{"message": "Bad Request: Invalid message fields", "status": 400, "details": [...]}` |
+| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`                           |
+| `404`  | `{"message": "Endpoint not found", "status": 404}`                                    |
 
 {% hint style="info" %}
-`sender-channel` decides where the message goes: Astroid looks up the channel's [position](endpoint-object.md#how-channels-are-paired) and sends the message to the channels at the same position on the other platforms. If the channel isn't registered in your endpoint, the message is not sent.
+`sender-channel` decides where the message goes: Astroid looks up the channel's [position](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9#how-channels-are-paired) and sends the message to the channels at the same position on the other platforms. If the channel isn't registered in your endpoint, the message is not sent.
 {% endhint %}
 
 ## Message object
 
 Only these top-level keys are allowed. Any other key returns `400`.
 
-| Key              | Type           | Description                                                                 |
-| ---------------- | -------------- | --------------------------------------------------------------------------- |
-| `sender`         | string         | Platform the message comes from: `discord`, `guilded`, `revolt` or `nerimity`. |
-| `sender-channel` | string         | ID of the channel the message was sent in.                                  |
-| `author`         | object         | `name`, `id` and `avatar` (URL) of the author.                              |
-| `content`        | string         | The message text.                                                           |
-| `attachments`    | array          | URLs of attached files.                                                     |
-| `embed`          | object         | Optional embed: `title`, `description`, `fields` (array), `footer`, `image`, `thumbnail`. |
-| `isReply`        | boolean        | `true` if the message replies to another message.                           |
-| `reply`          | object         | The message being replied to: `author` and `message`.                       |
+| Key              | Type    | Description                                                                               |
+| ---------------- | ------- | ----------------------------------------------------------------------------------------- |
+| `sender`         | string  | Platform the message comes from: `discord`, `guilded`, `revolt` or `nerimity`.            |
+| `sender-channel` | string  | ID of the channel the message was sent in.                                                |
+| `author`         | object  | `name`, `id` and `avatar` (URL) of the author.                                            |
+| `content`        | string  | The message text.                                                                         |
+| `attachments`    | array   | URLs of attached files.                                                                   |
+| `embed`          | object  | Optional embed: `title`, `description`, `fields` (array), `footer`, `image`, `thumbnail`. |
+| `isReply`        | boolean | `true` if the message replies to another message.                                         |
+| `reply`          | object  | The message being replied to: `author` and `message`.                                     |
 
 ### Full example
 

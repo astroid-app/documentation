@@ -1,26 +1,26 @@
 ---
-icon: sliders
 description: Read your endpoint and change its configuration.
+icon: file-brackets-curly
 ---
 
-# Endpoints & configuration
+# Endpoints
 
 ## Get an endpoint
 
 <mark style="color:green;">`GET`</mark> `/{endpointId}?token=YOUR-TOKEN`
 
-Returns the full [endpoint object](endpoint-object.md).
+Returns the full [endpoint object](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9).
 
 ```shell
 curl 'https://api.astroid.cc/YOUR-ENDPOINT-ID?token=YOUR-TOKEN'
 ```
 
-| Status | Response                                                     |
-| ------ | ------------------------------------------------------------ |
-| `200`  | The [endpoint object](endpoint-object.md)                    |
-| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`  |
-| `403`  | `{"message": "Forbidden: Endpoint is suspended", "status": 403}` |
-| `404`  | `{"message": "Endpoint not found", "status": 404}`           |
+| Status | Response                                                                      |
+| ------ | ----------------------------------------------------------------------------- |
+| `200`  | The [endpoint object](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9) |
+| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`                   |
+| `403`  | `{"message": "Forbidden: Endpoint is suspended", "status": 403}`              |
+| `404`  | `{"message": "Endpoint not found", "status": 404}`                            |
 
 ## Add to the configuration
 
@@ -31,7 +31,7 @@ Changes your endpoint's `config`. The body is a **partial** config: send only th
 * **Lists** (`channels.*`, `webhooks.*`, `blacklist`, `allowed-ids`, `emojis`): the values you send are **added** to the existing list. They don't replace it.
 * **Single values** (`logs.*`, `emoji_filtering`, `self-user`, `isbeta`): the value you send replaces the old one.
 
-Allowed top-level keys: `allowed-ids`, `blacklist`, `channels`, `emoji_filtering`, `emojis`, `isbeta`, `logs`, `self-user`, `webhooks`. See the [endpoint object](endpoint-object.md#config) for what each one does.
+Allowed top-level keys: `allowed-ids`, `blacklist`, `channels`, `emoji_filtering`, `emojis`, `isbeta`, `logs`, `self-user`, `webhooks`. See the [endpoint object](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9#config) for what each one does.
 
 {% tabs %}
 {% tab title="Add a blacklisted word" %}
@@ -66,23 +66,23 @@ curl --request POST 'https://api.astroid.cc/YOUR-ENDPOINT-ID/config?token=YOUR-T
   --data '{"blacklist": ["badword"]}'
 ```
 
-| Status | Response                                                                                     |
-| ------ | -------------------------------------------------------------------------------------------- |
-| `200`  | The updated `config` object                                                                  |
-| `400`  | `{"message": "Bad Request: Invalid config", "status": 400, "details": [...]}`                |
-| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`                                  |
-| `403`  | `{"message": "Forbidden: Endpoint is suspended", "status": 403}`                             |
-| `404`  | `{"message": "Endpoint not found", "status": 404}`                                           |
+| Status | Response                                                                      |
+| ------ | ----------------------------------------------------------------------------- |
+| `200`  | The updated `config` object                                                   |
+| `400`  | `{"message": "Bad Request: Invalid config", "status": 400, "details": [...]}` |
+| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`                   |
+| `403`  | `{"message": "Forbidden: Endpoint is suspended", "status": 403}`              |
+| `404`  | `{"message": "Endpoint not found", "status": 404}`                            |
 
 {% hint style="info" %}
-`channels` and `webhooks` must contain at least one platform key when you send them. Keep the [channel order](endpoint-object.md#how-channels-are-paired) in mind when you add channels.
+`channels` and `webhooks` must contain at least one platform key when you send them. Keep the [channel order](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9#how-channels-are-paired) in mind when you add channels.
 {% endhint %}
 
 ## Remove from the configuration
 
 <mark style="color:red;">`DELETE`</mark> `/{endpointId}/config?token=YOUR-TOKEN`
 
-Removes items from list values in your `config`. The body has the same shape as for [adding](#add-to-the-configuration). Every value you list is removed. Non-list values are ignored.
+Removes items from list values in your `config`. The body has the same shape as for [adding](endpoints.md#add-to-the-configuration). Every value you list is removed. Non-list values are ignored.
 
 ```shell
 curl --request DELETE 'https://api.astroid.cc/YOUR-ENDPOINT-ID/config?token=YOUR-TOKEN' \
@@ -90,10 +90,10 @@ curl --request DELETE 'https://api.astroid.cc/YOUR-ENDPOINT-ID/config?token=YOUR
   --data '{"blacklist": ["badword"]}'
 ```
 
-The responses are the same as for [adding](#add-to-the-configuration). An empty body returns `400` with `"Bad Request: No config provided"`.
+The responses are the same as for [adding](endpoints.md#add-to-the-configuration). An empty body returns `400` with `"Bad Request: No config provided"`.
 
 {% hint style="warning" %}
-Removing a channel from the middle of a list shifts every channel after it, which changes [which channels are paired](endpoint-object.md#how-channels-are-paired). Remove the matching channel on every platform at the same time.
+Removing a channel from the middle of a list shifts every channel after it, which changes [which channels are paired](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9#how-channels-are-paired). Remove the matching channel on every platform at the same time.
 {% endhint %}
 
 ## List bridged channels
@@ -117,10 +117,10 @@ Returns only the bridged channel IDs per platform.
 
 Checks that your endpoint has every key it needs. Use this if your bridge behaves strangely.
 
-| Status | Response                                                   |
-| ------ | ---------------------------------------------------------- |
-| `200`  | `{"message": "Endpoint is healthy", "status": 200}`        |
-| `500`  | `{"message": "Endpoint is not healthy", "status": 500}`    |
+| Status | Response                                                |
+| ------ | ------------------------------------------------------- |
+| `200`  | `{"message": "Endpoint is healthy", "status": 200}`     |
+| `500`  | `{"message": "Endpoint is not healthy", "status": 500}` |
 
 ## Repair an endpoint
 
