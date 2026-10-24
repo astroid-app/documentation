@@ -15,12 +15,12 @@ Returns the full [endpoint object](/broken/pages/7c6cd40e8c1d6fb5eecb80939d20805
 curl 'https://api.astroid.cc/YOUR-ENDPOINT-ID?token=YOUR-TOKEN'
 ```
 
-| Status | Response                                                                      |
-| ------ | ----------------------------------------------------------------------------- |
-| `200`  | The [endpoint object](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9) |
-| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`                   |
-| `403`  | `{"message": "Forbidden: Endpoint is suspended", "status": 403}`              |
-| `404`  | `{"message": "Endpoint not found", "status": 404}`                            |
+| Status | Response                                                         |
+| ------ | ---------------------------------------------------------------- |
+| `200`  | The [endpoint object](endpoint-object.md)                        |
+| `401`  | `{"message": "Unauthorized: Invalid token", "status": 401}`      |
+| `403`  | `{"message": "Forbidden: Endpoint is suspended", "status": 403}` |
+| `404`  | `{"message": "Endpoint not found", "status": 404}`               |
 
 ## Add to the configuration
 
@@ -31,7 +31,7 @@ Changes your endpoint's `config`. The body is a **partial** config: send only th
 * **Lists** (`channels.*`, `webhooks.*`, `blacklist`, `allowed-ids`, `emojis`): the values you send are **added** to the existing list. They don't replace it.
 * **Single values** (`logs.*`, `emoji_filtering`, `self-user`, `isbeta`): the value you send replaces the old one.
 
-Allowed top-level keys: `allowed-ids`, `blacklist`, `channels`, `emoji_filtering`, `emojis`, `isbeta`, `logs`, `self-user`, `webhooks`. See the [endpoint object](/broken/pages/7c6cd40e8c1d6fb5eecb80939d208052710ea7d9#config) for what each one does.
+Allowed top-level keys: `allowed-ids`, `blacklist`, `channels`, `emoji_filtering`, `emojis`, `isbeta`, `logs`, `self-user`, `webhooks`. See the [endpoint object](endpoint-object.md) for what each one does.
 
 {% tabs %}
 {% tab title="Add a blacklisted word" %}
